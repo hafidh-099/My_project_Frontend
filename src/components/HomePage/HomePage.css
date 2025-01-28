@@ -1,0 +1,138 @@
+/* General Page Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-bottom: 70px; /* Avoid overlap with fixed footer */
+}
+
+/* Header Styling */
+.header {
+  width: 199vh;
+  height: 16vh;
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  text-transform: uppercase;
+}
+
+/* Title Styling */
+.home-title {
+  font-size: 28px;
+  color: #343a40;
+  margin-top: 80px; /* Avoid overlap with fixed header */
+  margin-bottom: 20px;
+}
+
+/* Food Items Container */
+.food-items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+/* Food Item Card */
+.food-item {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.food-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.food-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.food-name {
+  font-size: 20px;
+  color: #343a40;
+  margin: 10px 0 5px;
+}
+
+.food-description {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.food-price {
+  font-size: 16px;
+  color: #28a745;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.add-to-cart-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #00b32d;
+}
+
+/* Submit Cart Button */
+.submit-cart-btn {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  width: 200px;
+  padding: 10px 15px; /* Reduced size */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-cart-btn:hover {
+  background-color: #68b3d1;
+}
+
+/* Footer Styling */
+.footer {
+  width: 100%;
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+}
