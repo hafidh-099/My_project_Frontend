@@ -16,7 +16,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/login/', {
+      const response = await axios.post('http://13.61.212.40:8000/login/', {
         username,
         password,
         is_admin: isAdmin,

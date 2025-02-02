@@ -40,7 +40,7 @@ function AdminPage() {
 
   const fetchFoodItems = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/home/');
+      const response = await axios.get('http://13.61.212.40:8000/home/');
       setFoodItems(response.data);
     } catch (error) {
       console.error('Error fetching food items:', error);
@@ -49,7 +49,7 @@ function AdminPage() {
 
   const fetchOrders = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/order/');
+      const response = await axios.get('http://13.61.212.40:8000/order/');
       setOrders(response.data);
     } catch (error) {
       console.error('Error fetching orders:', error);
@@ -58,7 +58,7 @@ function AdminPage() {
 
   const fetchCustomers = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/cust/');
+      const response = await axios.get('http://13.61.212.40:8000/cust/');
       setCustomers(response.data);
     } catch (error) {
       console.error('Error fetching customers:', error);
@@ -70,9 +70,9 @@ function AdminPage() {
     e.preventDefault();
     try {
       if (isEditingFood) {
-        await axios.put(`http://localhost:8000/home/${foodForm.id}/`, foodForm);
+        await axios.put(`http://13.61.212.40:8000/home/${foodForm.id}/`, foodForm);
       } else {
-        await axios.post('http://localhost:8000/home/', foodForm);
+        await axios.post('http://13.61.212.40:8000/home/', foodForm);
       }
       setFoodForm({ id: null, name: '', description: '', price: '', img_url: '' });
       setIsEditingFood(false);
@@ -86,9 +86,9 @@ function AdminPage() {
     e.preventDefault();
     try {
       if (isEditingCustomer) {
-        await axios.put(`http://localhost:8000/cust/${customerForm.id}/`, customerForm);
+        await axios.put(`http://13.61.212.40:8000/cust/${customerForm.id}/`, customerForm);
       } else {
-        await axios.post('http://localhost:8000/cust/', customerForm);
+        await axios.post('http://13.61.212.40:8000/cust/', customerForm);
       }
       setCustomerForm({ id: null, name: '', phone: '', address: '', password: '' });
       setIsEditingCustomer(false);
@@ -102,9 +102,9 @@ function AdminPage() {
     e.preventDefault();
     try {
       if (isEditingOrder) {
-        await axios.put(`http://localhost:8000/order/${orderForm.id}/`, orderForm);
+        await axios.put(`http://13.61.212.40:8000/order/${orderForm.id}/`, orderForm);
       } else {
-        await axios.post('http://localhost:8000/order/', orderForm);
+        await axios.post('http://13.61.212.40:8000/order/', orderForm);
       }
       setOrderForm({ id: null, customer: '', food_items: [], total_price: '' });
       setIsEditingOrder(false);
@@ -122,7 +122,7 @@ function AdminPage() {
 
   const handleDeleteFood = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/home/${id}/`);
+      await axios.delete(`http://13.61.212.40:8000/home/${id}/`);
       fetchFoodItems();
     } catch (error) {
       console.error('Error deleting food item:', error);
@@ -136,7 +136,7 @@ function AdminPage() {
 
   const handleDeleteCustomer = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/cust/${id}/`);
+      await axios.delete(`http://13.61.212.40:8000/cust/${id}/`);
       fetchCustomers();
     } catch (error) {
       console.error('Error deleting customer:', error);
@@ -150,7 +150,7 @@ function AdminPage() {
 
   const handleDeleteOrder = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/order/${id}/`);
+      await axios.delete(`http://13.61.212.40:8000/order/${id}/`);
       fetchOrders();
     } catch (error) {
       console.error('Error deleting order:', error);

@@ -38,7 +38,7 @@ function OrderPage() {
                 total_price: totalPrice,
             };
 
-            const response = await fetch('http://localhost:8000/confirm_order/', {
+            const response = await fetch('http://13.61.212.40:8000/confirm_order/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -47,7 +47,8 @@ function OrderPage() {
             });
 
             if (response.ok) {
-                const result = await response.json();
+                //const result = await response.json();
+                await response.json(); // Just to consume the response
                 alert('Order submitted successfully! Thank you for choose Nyam Tam. prepare our cash when you receive package.');
                 navigate('/');
             } else {

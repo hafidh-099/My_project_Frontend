@@ -11,7 +11,7 @@ function HomePage() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8000/home/')
+      .get('http://13.61.212.40:8000/home/')
       .then((response) => {
         setFoods(response.data);
       })
