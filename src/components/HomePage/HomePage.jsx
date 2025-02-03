@@ -11,7 +11,7 @@ function HomePage() {
 
   useEffect(() => {
     axios
-      .get('http://13.61.212.40:8000/home/')
+      .get('https://my-project-5-v43w.onrender.com/home/')
       .then((response) => {
         setFoods(response.data);
       })

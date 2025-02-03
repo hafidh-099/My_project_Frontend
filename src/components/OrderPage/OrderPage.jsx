@@ -38,7 +38,7 @@ function OrderPage() {
                 total_price: totalPrice,
             };
 
-            const response = await fetch('http://13.61.212.40:8000/confirm_order/', {
+            const response = await fetch('https://my-project-5-v43w.onrender.com/confirm_order/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

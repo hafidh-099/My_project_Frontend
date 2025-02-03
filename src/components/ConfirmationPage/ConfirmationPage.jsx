@@ -22,7 +22,7 @@ function ConfirmationPage() {
 
     try {
       // Call the confirmation endpoint
-      const response = await axios.post('http://13.61.212.40:8000/confirm_order/', {
+      const response = await axios.post('https://my-project-5-v43w.onrender.com/confirm_order/', {
         phone: formData.phone,
         password: formData.password,
         food_items: JSON.parse(localStorage.getItem('cart')), // Fetch cart from localStorage

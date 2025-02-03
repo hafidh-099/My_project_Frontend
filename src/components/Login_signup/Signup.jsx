@@ -21,7 +21,7 @@ function SignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://13.61.212.40:8000/signup/', formData);
+      const response = await axios.post('https://my-project-5-v43w.onrender.com/signup/', formData);
       console.log('User registered successfully:', response.data);
       alert('Registration successful!');
       navigate('/login'); // Navigate to the login page after successful signup
